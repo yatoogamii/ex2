@@ -17,7 +17,7 @@ import login from "./services/login";
 import getAllUsers from "./services/getAllUsers";
 import blockUser from "./services/blockUser";
 import addNewUser from "./services/addNewUser";
-import me from "./me";
+import me from "./services/me";
 import session from "express-session";
 import bodyParser from "body-parser";
 
@@ -70,5 +70,3 @@ app.use("*", staticClient);
 
 // start the Express server
 app.listen( 3030, () => { console.log( `server started at http://localhost: 8000` ); } );
-
-// karbeb

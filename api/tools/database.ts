@@ -30,9 +30,9 @@ mongoose.connection.on('error', (error) => {
   console.log('Database connection error');
 });
 
-const database = async (url: string): Promise<boolean> => {
-  if (!url) throw new Error('No URL for database was provided');
-  await mongoose.connect(url, {
+const database = async (): Promise<boolean> => {
+  if (!process.env.DATABASE_URL) throw new Error('No URL for database was provided');
+  await mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     autoReconnect: true,

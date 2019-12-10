@@ -33,8 +33,7 @@ export default class App extends Component<any, any> {
       case 'private':
         return (
           <>
-            Espace privé<br/>
-            <a href={"/logout"}>Logout</a>
+            <PrivateSpace />
           </>
         );
       
@@ -52,5 +51,27 @@ export default class App extends Component<any, any> {
         );
     }
   }
+  
+}
+
+
+class PrivateSpace extends Component<any, any> {
+  
+  constructor(props: any) {
+    super(props);
+  }
+  
+  render() {
+  
+    return (
+      <>
+        Espace privé<br/>
+        <a href={"/logout"}>Logout</a>
+      </>
+    );
+    
+    
+  }
+  
   
 }
